@@ -21,6 +21,8 @@ ul,ol{
 
 img{
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -28,7 +30,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-font-color);
 }
-
 
 .conteiner{
   width: 1158px;
@@ -38,7 +39,11 @@ body {
   margin: 0 auto;
 }
 
-/* Logo */
+
+.list {
+  list-style: none;
+}
+/* --------------------------Logo------------------------------ */
 .logo {
   text-decoration: none;
   font-family: Raleway;
@@ -49,30 +54,35 @@ body {
   text-transform: uppercase;
 }
   
-.header-navigation>a{
-  margin-right: 76px;
-}
-.header a {
-  line-height: 1.3;
-  color: var(--secondary-dark-color);
-  padding-top: 24px;
-  padding-bottom: 24px;
-  
-}
-
 .web {
   color: var(--accent-color);
 }
 
 
-/*Header*/
+/*-------------------------------Header-------------------------------*/
+
+
 .header {
   background-color: var(--main-light-color);
+  max-height: 72px;
+  border-bottom: 1px solid #E7E9FC;
 }
+
+.header-navigation>a {
+  margin-right: 76px;
+}
+
+.header .logo {
+  line-height: 1.3;
+  color: var(--secondary-dark-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+}
+
 .header > .conteiner{
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #E7E9FC;
 }
 .header-navigation{
   display: flex;
@@ -87,10 +97,11 @@ body {
   display: flex;
 }
 .navigation {
+  display: inline-block;
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -108,6 +119,7 @@ body {
 
 .mail-link,
 .tel {
+  display: inline-block;
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
@@ -133,20 +145,18 @@ body {
   color: var(--secondary-accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
 .navigation.current{
   color: var(--secondary-accent-color);
 }
 
-/*Body*/
+/*------------------------------------Body-------------------------------------------------------------------------*/
 
 .main {
   background-color: var(--main-light-color);
 }
 
+
+/*-----------------------------HERO-------------------------------*/
 .hero {
   background-color: var(--secondary-dark-color);
   background-image: var(--bg-gradient), url(../images/people-office\ 1.jpg);
@@ -237,6 +247,8 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+
+/*---------------------------PORTFOLIO----------------------*/
 .porfolio-menu{
   padding-top: 96px;
   padding-bottom: 120px;
@@ -250,32 +262,27 @@ body {
  text-align: center;
  align-items: center;
  justify-content: center;
- 
  justify-self: center;
 }
 
 .portfolio-cards{
   display: flex;
   flex-wrap: wrap;
+  
   gap: 48px 24px;
   background-color: var(--main-light-color);
+  
 }
 
-.portfolio-cards>li{
-box-sizing: inherit;
-}
 
 .card-text{
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-  border: 1px solid var(--third-light-color);
   border-left: 1px solid var(--third-light-color);
   border-right: 1px solid var(--third-light-color);
   border-bottom: 1px solid var(--third-light-color);
-  
 }
-
 
 .card-text>h3{
   margin-bottom: 8px;
@@ -284,13 +291,25 @@ box-sizing: inherit;
 .projects {
   text-decoration: none;
 }
+.project-card{
+  max-width: 360px;
+  max-height: 420px;
+  flex-basis: calc((100%-48)/3);
+  box-sizing: border-box;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
-.project-card:hover .card-text,
-.project-card:focus .card-text{
- border: 0.5px solid var(--secondary-light-color);
+
+
+
+.project-card:hover, 
+.project-card:focus{
+ border-bottom: 0.5px solid var(--secondary-light-color);
  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+
+/*-------------------------Our advantages---------------------*/
 .our-adv{
   padding-top: 120px;
   padding-bottom: 120px;
@@ -342,7 +361,7 @@ box-sizing: inherit;
 .our-adv-item>h3{
   margin-bottom: 8px;
 }
-
+/*-------------------------What are we doing--------------*/
 .we-doing-item{
   display: flex;
   gap: 24px;
@@ -368,7 +387,7 @@ box-sizing: inherit;
   justify-self: center;
   margin-bottom: 72px;
 }
-
+/*----------------------------TEAM-------------------------*/
 .team {
   background-color: var(--secondary-light-color);
   padding-top: 120px;
@@ -414,9 +433,20 @@ box-sizing: inherit;
   justify-content: center;
 }
 
-.team-soc-link:hover{
+.team-soc-link:hover,
+.team-soc-link:focus{
   background-color: var(--secondary-accent-color);
 }
+
+.team-soc-icon{
+  fill: var(--secondary-light-color);
+}
+
+.team-soc-icon:hover,
+.team-soc-icon:focus {
+  fill: var(--secondary-light-color);
+}
+
 
 .point,
 .title {
@@ -436,7 +466,7 @@ box-sizing: inherit;
   /* or 150% */
   color: var(--secondary-font-color);
 }
-
+/*----------------------CUSTOMERS-----------------*/
 .customers{
   padding-top: 130px;
   padding-bottom: 120px;
@@ -463,16 +493,18 @@ box-sizing: inherit;
   fill: #8E8F99;
  }
 
-.customer-link:hover{
+.customer-link:hover,
+.customer-link:focus{
 border-color: var(--secondary-accent-color);
 }
-.customer-icon:hover{
+.customer-icon:hover,
+.customer-icon:focus{
   fill: var(--secondary-accent-color);
 }
 
 
 
-/* Footer */
+/*----------------------Footer----------------------- */
 .footer {
   background-color: var(--secondary-dark-color);
   padding-top: 100px;
@@ -529,8 +561,17 @@ border-color: var(--secondary-accent-color);
   justify-content: center;
 }
 
-.footer-soc-link:hover {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
   background-color: #31D0AA;
+}
+
+.footer-soc-icon{
+  fill: var(--secondary-light-color);
+}
+.footer-soc-icon:hover,
+.footer-soc-icon:focus {
+ fill: var(--secondary-light-color);
 }
 
 .logo-tagline{
