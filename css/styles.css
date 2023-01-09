@@ -319,8 +319,8 @@ box-sizing: inherit;
 }
 
 .our-adv-icon{
- width: 264px;
- height: 112px;
+  max-width: 264px;
+ max-height: 112px;
  background-color: var(--secondary-light-color);
  border-radius: 4px;
  display: flex;
@@ -331,7 +331,8 @@ box-sizing: inherit;
 }
 
 .icon{
-padding: 24px 100px;
+  padding: 24px 100px;
+  max-height: 112px;
 }
 
 .our-adv-list:last-child {
